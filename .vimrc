@@ -122,3 +122,9 @@ nmap <Tab>l :ls<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+
