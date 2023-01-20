@@ -3,8 +3,6 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
-	ignorecase = true
-	precomposeunicode = true
 [remote "origin"]
 	url = https://github.com/VundleVim/Vundle.vim.git
 	fetch = +refs/heads/*:refs/remotes/origin/*

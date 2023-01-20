@@ -3,8 +3,8 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
-	ignorecase = true
-	precomposeunicode = true
+[submodule]
+	active = .
 [remote "origin"]
 	url = https://github.com/tpope/vim-fugitive.git
 	fetch = +refs/heads/*:refs/remotes/origin/*

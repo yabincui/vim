@@ -1,5 +1,5 @@
-" Copyright 2010-present Greg Hurrell. All rights reserved.
-" Licensed under the terms of the BSD 2-clause license.
+" SPDX-FileCopyrightText: Copyright 2010-present Greg Hurrell and contributors.
+" SPDX-License-Identifier: BSD-2-Clause
 
 function! commandt#private#ListMatches() abort
   ruby $command_t.list_matches
@@ -39,6 +39,10 @@ endfunction
 
 function! commandt#private#Refresh() abort
   ruby $command_t.refresh
+endfunction
+
+function! commandt#private#RemoveBuffer() abort
+  ruby $command_t.remove_buffer
 endfunction
 
 function! commandt#private#ToggleFocus() abort
@@ -86,5 +90,16 @@ function! commandt#private#RunAutocmd(cmd) abort
     execute 'silent doautocmd <nomodeline> User ' . a:cmd
   else
     execute 'silent doautocmd User ' . a:cmd
+  endif
+endfunction
+
+function! commandt#private#capture(cmd) abort
+  if exists('*execute')
+    return execute(a:cmd)
+  else
+    redir => l:capture
+    silent execute a:cmd
+    redir END
+    return l:capture
   endif
 endfunction

@@ -1,12 +1,12 @@
-# Copyright 2010-present Greg Hurrell. All rights reserved.
-# Licensed under the terms of the BSD 2-clause license.
+# SPDX-FileCopyrightText: Copyright 2010-present Greg Hurrell and contributors.
+# SPDX-License-Identifier: BSD-2-Clause
 
 require 'spec_helper'
 
 describe CommandT::Finder::BufferFinder do
   before do
     @paths = %w(.git/config .vim/notes .vimrc baz foo/beta)
-    any_instance_of(CommandT::Scanner::BufferScanner, :paths => @paths)
+    allow_any_instance_of(CommandT::Scanner::BufferScanner).to receive(:paths).and_return(@paths)
     @finder = CommandT::Finder::BufferFinder.new
   end
 
@@ -37,9 +37,8 @@ describe CommandT::Finder::BufferFinder do
       expect(@finder.sorted_matches_for('i')).to include('.vim/notes')
     end
 
-    it "does not use the Vim expand() function to consult the 'wildignore' setting" do
-      do_not_allow(::VIM).evaluate
-      @finder.sorted_matches_for('i')
+    it "does not consult the 'wildignore' setting" do
+      expect(@finder.sorted_matches_for('').count).to eq(5)
     end
 
     it 'obeys the :limit option for empty search strings' do

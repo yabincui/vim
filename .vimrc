@@ -1,8 +1,3 @@
-
-" avoid exit 1
-filetype on
-
-""""""""""""""""""""""""""""" start use vundle """"""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -20,7 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+" Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -30,7 +25,12 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
-Plugin 'ascenator/L9', {'name': 'newL9'}
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Use :Deol to open shell
+Plugin 'shougo/deol.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,13 +47,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-""""""""""""""""""""""""""""" end use vundle """"""""""""""""""""""""""""""""""""""""""""""""""
+" self configurations
 
-"let g:rustfmt_autosave = 1
-Plugin 'rust-lang/rust.vim'
-
-
-"disable some commands for .vimrc not in ~
 set exrc
 set secure
 
@@ -88,13 +83,16 @@ if has("gui_running")
 endif
 
 "vim-pathogen: manage runtimepath
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " Used by vim-airline
 "Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 "Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" allow backspace to delete any chracter
+set backspace=indent,eol,start
 
 """"""""""""""" Replace the tab shortcuts I'd no longer be using?"""""
 
@@ -114,7 +112,7 @@ nmap <Tab><Right> :bnext<CR>
 
 " Close the current buffer and move to the previous one
 " This replaces the idea of closing a tab
-nmap <Tab>q :bp <BAR> bd #<CR>
+nmap <Tab>q :bp <BAR> bd #<CR>                                              
 
 " Show all open buffers and their status
 nmap <Tab>l :ls<CR>
@@ -128,3 +126,5 @@ vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
 
+" exit Deol shell with ESC
+tnoremap <ESC>   <C-\><C-n>

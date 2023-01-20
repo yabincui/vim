@@ -1,8 +1,17 @@
-# pack-refs with: peeled fully-peeled 
-2d80b2e65cd690dd17c66fb52e5f9fb09700b1e7 refs/remotes/origin/master
-a6d9a30fc9484632db1e0f11c989296168001e91 refs/remotes/origin/media
-44c4c1c0ecf50f395de7b1794d8fad51e5b63e70 refs/remotes/origin/next
+# pack-refs with: peeled fully-peeled sorted 
+806b20304db828e159fb886087a3b8dfbd922ec1 refs/remotes/origin/5-x-devel
+806b20304db828e159fb886087a3b8dfbd922ec1 refs/remotes/origin/5-x-release
+23d2860931dcbcbdfb3543bed002e35d7b3b898b refs/remotes/origin/main
+23d2860931dcbcbdfb3543bed002e35d7b3b898b refs/remotes/origin/master
+5a64b3227161fbe332419a98367cf0b2b70dba1c refs/remotes/origin/media
+8ac6c961accda4316618cd48d0b7a86f3bb8bfba refs/remotes/origin/next
+e345176dd1a27222f281c6881a5a0e808dfbd936 refs/remotes/origin/pu
+3dffa2c4572667db61a8e5dda908a340b62d0e4c refs/remotes/origin/python
 2f593e77a6eacef7cedbfc6d5a7d1e6e5b4c4a71 refs/remotes/origin/releases
+f8d67e234aa39856ce62246cd4bf1c76f8b46245 refs/remotes/origin/wincent/actions-dupes
+f6a6cf7fb17cee08ca0ca84ffce6aabccc3d8476 refs/remotes/origin/wincent/list-finder
+0938103494a143fa35f49887c3820b251750c69f refs/remotes/origin/wincent/mimalloc
+e8d4847f0ca246a605c720b4a740b57f7cdb3a65 refs/remotes/origin/wincent/validation
 2d8605335c507f4c1adec337490d0011e3d5b1e7 refs/tags/0.1
 ^e663648da7a0836fe2368b909589c05f809b1d2d
 c00c96a976b1f5b3329c5b8f87254e75948d421c refs/tags/0.2
@@ -87,3 +96,31 @@ ec4d783c6e880195f6e1be5a0e7394c5e2cb35e9 refs/tags/3.0.1
 ^3f596b5b2eedb1d6f160a4b2e4dcb9a5ab289318
 cbb91939ea27016bc171fb97be9e85905ed68ba2 refs/tags/3.0.2
 ^62f6f9ca4ec571a959533352e00873357dcbec22
+a188250e215fcfaf2a22c83b71284ab977bd2c01 refs/tags/4.0
+^99d06fa02753be74cc44f487c255d9326eca8c9a
+5473d0406e812b1852d0b5aaa6a8ea33cc07f733 refs/tags/5.0
+^c62079dcce43bbfadba39cf0b7280cd71e34ad3f
+51341cd94431477cc53bf0b36dde2e7910e5b049 refs/tags/5.0.1
+^287829398ced639deaf9a7f9da56ac747940cad4
+b752dedc18d0a3bde4bc6070b5e157f30b9b048b refs/tags/5.0.2
+^1c797d0aa835743a9a8addd7b2c70d7f7ff9ff1a
+0c9f2c17b8c1c4bea370425d0824f7de4654f1d0 refs/tags/5.0.3
+^1a5b41a07e2d49c7f639ab437cd7f3c68a5cc1ad
+a84859a12aec3d5f050f2c2a5f42410c89dff40f refs/tags/5.0.4
+^f00c19b58154f458a8bc1114317919928ef6ab7a
+45636b18ebcd6dad5d6c499e8dc1eadde1e4b247 refs/tags/5.0.5
+^806b20304db828e159fb886087a3b8dfbd922ec1
+90122f2a88d06a331fe54cd4b43563494f456656 refs/tags/6.0.0-a.0
+^8ac6c961accda4316618cd48d0b7a86f3bb8bfba
+badacea945e4abd5ec3029a4eefcd7c88366be4d refs/tags/6.0.0-a.1
+^7e9e293471f5b7ebc7ca1fdffefc24e2628df054
+8e93a2c3045404f4c8761341c3182aa78e433144 refs/tags/6.0.0-a.2
+^41e814c76ded0275c71ec349c6557c07f1a9e08a
+8b0623b0f2fd5c85703d383ce687d16b289571c4 refs/tags/6.0.0-a.3
+^ac4a39c0191d84f807b7184dc60aa32a8df4f9e1
+7d6b4109970aed261ff250940b82d2c8d1831ed7 refs/tags/6.0.0-a.4
+^f8962485757c5b1a266ddecff848a6d33eda04d6
+dd6df2417115e1d4da5ca308897f8e1eff55e712 refs/tags/6.0.0-b.0
+^320ba52f61ebd709e9438d6387d7f2419de6ee57
+73a5217c587e28a72c2d19b242da0216b59b04b8 refs/tags/6.0.0-b.1
+^bce50be1f40c74671d94306ec1e1a1b3f344183a

@@ -3,15 +3,11 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
-	ignorecase = true
-	precomposeunicode = true
+[submodule]
+	active = .
 [remote "origin"]
 	url = git://git.wincent.com/command-t.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
+[branch "main"]
 	remote = origin
-	merge = refs/heads/master
-[submodule "vendor/vimscriptuploader"]
-	url = https://github.com/tomtom/vimscriptuploader.rb.git
-[submodule "vendor/vroom"]
-	url = https://github.com/google/vroom.git
+	merge = refs/heads/main
