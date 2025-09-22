@@ -128,3 +128,4 @@ imap <C-v> <C-r><C-o>+
 
 " exit Deol shell with ESC
 tnoremap <ESC>   <C-\><C-n>
+set belloff=all
